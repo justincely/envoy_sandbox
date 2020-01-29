@@ -59,6 +59,6 @@ static_resources:
                   - actions:
                     - generic_key: {descriptor_value: default}
                     stage: 0
-                  retry_policy: {num_retries: 5, retry_on: 5xx}
+                  retry_policy: {num_retries: 3, retry_on: '5xx,reset'}
           stat_prefix: ingress_http
     name: listener_0
